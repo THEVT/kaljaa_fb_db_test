@@ -9,12 +9,12 @@
 <li><%= friendship_status(current_profile, @profile) %>
   <% unless Friendship.exists?(current_profile, @profile) %>
     <br />
-    <%= link_to "Request friendship with #{@profile.s1}", friendships_path(:friend_id => @profile), :method => :post, confirm: "Send friend request to #{@profile.s1}?" %>
+    <%- #link_to "Request friendship with #{@profile.s1}", friendships_path(:friend_id => @profile), :method => :post, confirm: "Send friend request to #{@profile.s1}?" -%>
      <% end %>
  </li>
 </ul>
 
-<%= link_to "Photos", profile_albums_path %>
+<%= link_to "Photos", profile_albums_path(@profile) %>
 
 <div id="tabs">
 	<ul>

@@ -6,11 +6,14 @@
 
 <%= @profile.favbrewery.b2 %>
 <ul>
-<li><%= friendship_status(current_profile, @profile) %>
+<li>
+<% if false %>
+	<%= friendship_status(current_profile, @profile) %>
   <% unless Friendship.exists?(current_profile, @profile) %>
     <br />
     <%= link_to "Request friendship with #{@profile.s1}", friendships_path(:friend_id => @profile), :method => :post, confirm: "Send friend request to #{@profile.s1}?" %>
      <% end %>
+<% end %>
  </li>
 </ul>
 

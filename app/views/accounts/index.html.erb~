@@ -1,12 +1,6 @@
 <h1>Friends</h1>
 
-<%= render 'friendships/friends' %>
-
-<ul>
-  <% for profile in @profile.friends %>
-  <li><%= link_to (profile.s1+" "+profile.s2), profile %></li>
-  <% end %>  
-</ul>
+<%= #render 'friendships/friends' %>
 
 <h1>All users</h1>
 
